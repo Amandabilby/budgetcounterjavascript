@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="indstyle.css">
+    <script src="indapp.js" defer></script>
+
+</head>
+<body>
+    
+<div class="rubrik">Inkomster, kostnader och vinst</div>
+<div class="app">
+    <div class="control">
+      <div class="input__group">
+        <select class="field select__type">
+          <option class="type__option" value="income">+ Inkomst</option>
+          <option class="type__option" value="expense">- Kostnad</option>
+        </select>
+        <input class="field input__description" type="text" placeholder="Beskrivning"/>
+        <input class="field input__value" type="text" placeholder="Summa"/>
+        <button>OK</button>
+      </div>
+    </div>
+    <div class="income__container">
+      <div class="income__items"></div>
+      
+    </div>
+    <div class="expense__container">
+      <div class="expense__items"></div>
+    </div>
+
+    <div class="result__container">
+        Resultat
+            <div class="income__total"></div>
+            <div class="expense__total"></div>
+    </div>
+  </div>
+</body>
+</html>

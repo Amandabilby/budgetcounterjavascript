@@ -1,0 +1,111 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    color: white;
+    font: normal 1.25rem/125% acumin-pro, sans-serif;
+    margin: 5%;
+    background: black;
+    
+    text-rendering: optimizeLegibility;
+  }
+
+  .rubrik {
+      text-align: center;
+      margin: 3rem;
+      font-size: 30px;
+  }
+  
+  input, select {
+    background: none;
+    border: none;
+    color: white;
+    outline: none;
+  }
+  
+  .app {
+      opacity: 0.8;
+      border: 2px solid white;
+    display: grid;
+    grid-template-columns: 30rem repeat(2, 1fr);
+    height: 70vh;
+  }
+  
+  .control, .expense__items, .income__items {
+    padding: 2rem;
+  }
+  
+  .control {
+    background: #202224;
+
+  }
+  
+  .field {
+    background: #b4b4b4;
+    font: normal 1rem/100% acumin-pro, sans-serif;
+    padding: 0.75rem 0.5rem;
+    width: 100%;
+  }
+  .field:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  .result__container {
+    padding: 1rem;
+    text-align: center;
+    background: #2e3036;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .expense__container, .income__container {
+    display: grid;
+    grid-template-rows: 1fr 5rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .expense__container {
+    background: #2e3036;
+    display: grid;
+    grid-template-rows: 1fr 5rem;
+  }
+  
+  .expense__total, .income__total {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .expense__total {
+    background: #222428;
+  }
+  
+  .income__container {
+    background: #282a2e;
+  }
+  
+  .income__total {
+    background: #222428;
+  }
+  
+  .item {
+    padding: 1rem;
+  }
+  .item:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  
+  .item__expense {
+    background: #f04646;
+  }
+  
+  .item__income {
+    background: #44b682;
+  }
+  
