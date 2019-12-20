@@ -1,0 +1,24 @@
+//Style till body
+
+body {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  margin: 5%;
+  background: linear-gradient(#222428, black);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+@media (min-width: 960px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1100px) {
+  body {
+    font-size: 1.5rem;
+  }
+}
