@@ -1,47 +1,57 @@
-let raknar = []; //Variabeln raknar görs till en array
- 
+
+let count = []; //Skapar en array
+
+// Skapar en funkion med variablar som pushar värdena till arrayen 'count' och skapar ett p element
 function List(e){
        e.preventDefault();
 
        var oper = document.getElementById('operators').value; //Variabel som är kopplad till operators
-    if(oper === '+') //Om du väljer + så händer följande: 
+    if(oper === '+') //+ lägger till inkomst
     {
 
-        const text= document.querySelector("#beskrivning").value; //Variabel som är kopplad till id: text 1
-        const tel2 = document.querySelector("#summa").value; //Variabel som är kopplad till id: tel 2
-        let num =Number(tel2); //Variabeln num gör att variabeln tel2 konverteras till nummer 3
-
-        raknar.push(num) //Pushar upp värdena i num till arrayen "raknar" 4
-        const div2 = document.createElement("P"); //Skapar ett element P när variabeln div2 anropas 5
-        div2.innerHTML = text + "    " + tel2 //Lägger text + tel2 i div2 inuti HTML-koden 6
-
-        document.getElementById("inkomster").appendChild(div2); //Div2 kopplas ihop med id:et inkomster 7
+        const beskr= document.querySelector("#beskrivning").value;
+        const summaInkomst = document.querySelector("#summa").value;
+        let num =Number(summaInkomst); 
+        count.push(num) 
+        const div2 = document.createElement("P"); 
+        div2.innerHTML = beskr + "    " + summaInkomst 
+        document.getElementById("inkomster").appendChild(div2);
 
     }
 
-   else if(oper === '-') //Om du väljer - så händer följande: 
+   else if(oper === '-') // - lägger till kostnad 
     {
 
-    const text= document.querySelector("#beskrivning").value; //Variabel som är kopplad till id: text 1
-    const tel = document.querySelector("#summa").value; //Variabel som är kopplad till id: tel 2
-    let num2 = Number(-tel); //Variabeln num gör att variabeln tel2 konverteras till nummer 3
+    const beskr= document.querySelector("#beskrivning").value; 
+    const summaCost = document.querySelector("#summa").value; 
+    let num2 = Number(-summaCost); 
 
-    raknar.push(num2) //Pushar upp värdena i num till arrayen "raknar" 4
-    const div= document.createElement("P"); //Skapar ett element P när variabeln div2 anropas 5
-    div.innerHTML= text + "    " + tel //Lägger text + tel2 i div2 inuti HTML-koden 6
+    count.push(num2) //Pushar upp värdena i num till arrayen 
+    const div= document.createElement("P"); 
+    div.innerHTML= beskr + "    " + summaCost 
 
-    document.getElementById("utgifter").appendChild(div); //Div2 kopplas ihop med id:et inkomster 7
-
-    }
-let totalt= 0; //totalen ska vara noll från början på vinsten, detta är variabeln för det
-    for(let i =0; i<raknar.length; i++){ //en loop som loopar igenom en array som bildas av alla nya värden
-      totalt +=  raknar[i] //Den lägger då till värdena på totalt ( alltså 0)
+    document.getElementById("utgifter").appendChild(div); 
 
     }
 
-    document.querySelector("#vinstbold").textContent = ['Total vinst:'] + [' '] + totalt //totalt kommer sen att synas på #vinstbold
+    if(document.querySelector("#beskrivning").value === "" || document.querySelector("#summa").value === "")
+    {
+        alert("Fyll i både beskrivning och summa!");
+    } // Skapar en alert ifall man inte fyllt i beskrivning och/eller summa
+    
+    
+let totalt= 0; 
+    for(let i =0; i<count.length; i++){ 
+      totalt +=  count[i] // Lägger till det totala värdet (plussar på från 0)
+
+    }
+
+   
+    document.querySelector("#totalVinst").textContent = ['Total vinst:'] + [' '] + totalt // kommer lägga till och visa det totala vinsten
+   
 
 }
 
 const addBtn = document.querySelector(".addBtn")
 addBtn.addEventListener("click", List );
+

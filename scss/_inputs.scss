@@ -1,0 +1,36 @@
+// Style till input och selects
+
+input,
+select {
+  background: none;
+  border: 1px solid $white;
+  color: $white;
+  outline: none;
+  padding: 10px;
+  margin-top: 2rem;
+  margin-left: 2rem;
+
+  &:hover {
+    background-color: $white;
+    color: $black;
+    transition: all 0.7s ease;
+    opacity: 0.4; }
+}
+
+
+select {
+  opacity: 0.7;
+  border: 0.5px solid $white;
+  width: 90%;
+  height: 2.5rem;
+  border-radius: none;
+  padding: 10px;
+  border-radius: none;
+
+  &:hover {
+    background-color: $white;
+    color: $black;
+    transition: all 0.7s ease;
+  }
+}
+

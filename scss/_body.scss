@@ -1,10 +1,10 @@
 //Style till body
 
 body {
-  color: white;
-  font-family: "Raleway", sans-serif;
+  color: $white;
+  font-family: $font-fam;
   margin: 5%;
-  background: linear-gradient(#222428, black);
+  background: linear-gradient($dark-grey, $black);
 }
 
 html {

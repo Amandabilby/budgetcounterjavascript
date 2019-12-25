@@ -1,8 +1,9 @@
-@import "./__app";
-@import "./__body";
-@import "./__footer";
-@import "./__header";
-@import "./__inputs";
-@import "./variable";
+
+@import "variable";
 @import "reset";
-@import "./__button";
+@import "app";
+@import "body";
+@import "footer";
+@import "header";
+@import "inputs";
+@import "button";
